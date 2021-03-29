@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Week 10</string>
+    <string name="backText"><![CDATA[<]]></string>
+    <string name="fwdText"><![CDATA[>]]></string>
+</resources>

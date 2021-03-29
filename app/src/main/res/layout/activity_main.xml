@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="409dp"
+        android:layout_height="502dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+    </WebView>
+
+    <Button
+        android:id="@+id/refBut"
+        android:layout_width="102dp"
+        android:layout_height="46dp"
+        android:onClick="refresh"
+        android:text="refresh"
+        app:layout_constraintBottom_toTopOf="@+id/addressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.921"
+        app:layout_constraintStart_toEndOf="@+id/fwdBut"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.854" />
+
+    <Button
+        android:id="@+id/fwdBut"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:onClick="loadNext"
+        android:text="@string/fwdText"
+        android:textSize="24sp"
+        app:backgroundTint="#00BCD4"
+        app:layout_constraintBottom_toTopOf="@+id/addressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84" />
+
+    <Button
+        android:id="@+id/backBut"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:onClick="loadPrev"
+        android:text="@string/backText"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/addressBar"
+        app:layout_constraintEnd_toStartOf="@+id/fwdBut"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84" />
+
+    <EditText
+        android:id="@+id/addressBar"
+        android:layout_width="327dp"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:inputType="textWebEditText|textNoSuggestions"
+        android:maxLines="1"
+        android:text="address:"
+        android:textSize="14sp"
+        android:selectAllOnFocus="true"
+        app:layout_constraintBottom_toTopOf="@+id/webView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.917" />
+
+    <Button
+        android:id="@+id/javaRunSo"
+        android:layout_width="62dp"
+        android:layout_height="45dp"
+        android:onClick="runSo"
+        android:text="SO"
+        app:layout_constraintBottom_toTopOf="@+id/addressBar"
+        app:layout_constraintEnd_toStartOf="@+id/refBut"
+        app:layout_constraintHorizontal_bias="0.841"
+        app:layout_constraintStart_toEndOf="@+id/fwdBut"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.848" />
+
+    <Button
+        android:id="@+id/javaRunInit"
+        android:layout_width="63dp"
+        android:layout_height="48dp"
+        android:onClick="runInit"
+        android:text="Init"
+        app:layout_constraintBottom_toTopOf="@+id/addressBar"
+        app:layout_constraintEnd_toStartOf="@+id/javaRunSo"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toEndOf="@+id/fwdBut"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.852" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
